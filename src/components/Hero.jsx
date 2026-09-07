@@ -80,7 +80,7 @@ export default function Hero({ theme }) {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
               <a
-                href="/PDF/My Resume.pdf"
+                href={`${import.meta.env.BASE_URL}PDF/My Resume.pdf`}
                 download="Ranjeet_Vishwakarma_Resume.pdf"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-black font-extrabold uppercase text-sm tracking-widest rounded-full shadow-[0_4px_25px_rgba(251,191,36,0.35)] hover:shadow-[0_0_40px_rgba(251,191,36,0.6)] hover:-translate-y-1 transition-all duration-300"
               >
@@ -148,11 +148,12 @@ export default function Hero({ theme }) {
               {/* Profile Image Container */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-zinc-900 shadow-[0_15px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_0_50px_rgba(0,0,0,0.9)] z-10 bg-zinc-100 dark:bg-zinc-950 transition-colors">
                 <img
-                  src="/img/Ranjit.jpg"
+                  src={`${import.meta.env.BASE_URL}img/Ranjit.jpg`}
                   alt="Ranjeet Vishwakarma"
                   className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    e.currentTarget.src = '/img/Ranjit.jpg';
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}img/Ranjit.jpg`;
                   }}
                 />
                 

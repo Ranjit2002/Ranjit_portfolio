@@ -78,7 +78,7 @@ export default function Navbar({ activeSection, setActiveSection, theme, toggleT
 
           {/* Resume Download CTA */}
           <a
-            href="/PDF/My Resume.pdf"
+            href={`${import.meta.env.BASE_URL}PDF/My Resume.pdf`}
             download="Ranjeet_Vishwakarma_Resume.pdf"
             className="group relative inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/30 dark:border-amber-400/40 rounded-full hover:bg-amber-400 hover:text-black dark:hover:bg-amber-400 dark:hover:text-black transition-all duration-300 shadow-[0_2px_10px_rgba(245,158,11,0.12)] hover:shadow-[0_0_20px_rgba(251,191,36,0.35)]"
           >
@@ -129,7 +129,7 @@ export default function Navbar({ activeSection, setActiveSection, theme, toggleT
           })}
           <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800/80 flex flex-col gap-3">
             <a
-              href="/PDF/My Resume.pdf"
+              href={`${import.meta.env.BASE_URL}PDF/My Resume.pdf`}
               download="Ranjeet_Vishwakarma_Resume.pdf"
               className="w-full flex items-center justify-center gap-2 py-3 bg-amber-400 text-black font-bold uppercase tracking-wider rounded-xl text-sm shadow-md hover:bg-amber-300 transition-colors"
             >
