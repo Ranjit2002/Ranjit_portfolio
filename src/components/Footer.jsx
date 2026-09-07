@@ -65,12 +65,9 @@ export default function Footer({ theme }) {
 
         </div>
 
-        {/* Bottom Credits & Built With */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs font-mono text-zinc-500">
+        {/* Bottom Credits */}
+        <div className="flex items-center justify-center pt-8 text-xs font-mono text-zinc-500 text-center">
           <p>© {new Date().getFullYear()} Ranjeet Vishwakarma. All rights reserved.</p>
-          <div className="flex items-center gap-2">
-            <span>Built with React 19 + Tailwind CSS v4 &amp; Vite</span>
-          </div>
         </div>
 
       </div>
