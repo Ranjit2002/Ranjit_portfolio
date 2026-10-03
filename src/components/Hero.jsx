@@ -1,17 +1,46 @@
-import React from 'react';
-import { Download, ArrowRight, Mail, Sparkles, Terminal, CheckCircle2, Zap, ShieldCheck, Code2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons.jsx';
+import React from "react";
+import {
+  Download,
+  ArrowRight,
+  Mail,
+  Sparkles,
+  Terminal,
+  CheckCircle2,
+  Zap,
+  ShieldCheck,
+  Code2,
+} from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./Icons.jsx";
 
 export default function Hero({ theme }) {
   const metrics = [
-    { value: '98%', label: 'Lighthouse Score', icon: <Zap className="w-3.5 h-3.5 text-amber-500" /> },
-    { value: '3+ Yrs', label: 'Active Coding', icon: <Terminal className="w-3.5 h-3.5 text-amber-500" /> },
-    { value: '15+', label: 'Projects & Repos', icon: <Code2 className="w-3.5 h-3.5 text-amber-500" /> },
-    { value: '100%', label: 'Responsive Design', icon: <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> },
+    {
+      value: "98%",
+      label: "Lighthouse Score",
+      icon: <Zap className="w-3.5 h-3.5 text-amber-500" />,
+    },
+    {
+      value: "3+ Yrs",
+      label: "Active Coding",
+      icon: <Terminal className="w-3.5 h-3.5 text-amber-500" />,
+    },
+    {
+      value: "15+",
+      label: "Projects & Repos",
+      icon: <Code2 className="w-3.5 h-3.5 text-amber-500" />,
+    },
+    {
+      value: "100%",
+      label: "Responsive Design",
+      icon: <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />,
+    },
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden"
+    >
       {/* Dynamic Ambient Background Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] md:w-[950px] h-[500px] bg-gradient-to-br from-amber-400/15 via-yellow-300/10 to-transparent dark:from-amber-500/15 dark:via-yellow-400/10 blur-[150px] rounded-full pointer-events-none z-0" />
       <div className="absolute top-1/2 right-[-10%] w-[450px] h-[450px] bg-amber-500/10 dark:bg-amber-600/10 blur-[170px] rounded-full pointer-events-none z-0" />
@@ -21,31 +50,35 @@ export default function Hero({ theme }) {
 
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
           {/* Left Hero Details */}
           <div className="lg:col-span-7 text-center lg:text-left pt-6 lg:pt-0">
-            
             {/* Status Pill */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-amber-500/10 dark:bg-amber-400/15 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs md:text-sm rounded-full shadow-[0_2px_15px_rgba(245,158,11,0.12)] dark:shadow-[0_0_20px_rgba(251,191,36,0.12)] mb-8 transition-colors">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span className="tracking-wider uppercase font-semibold">Available for Opportunities</span>
+              <span className="tracking-wider uppercase font-semibold">
+                Available for Opportunities
+              </span>
               <span className="text-zinc-400 dark:text-zinc-600">|</span>
-              <span className="text-zinc-600 dark:text-zinc-400 font-normal">FULL_STACK_DEV</span>
+              <span className="text-zinc-600 dark:text-zinc-400 font-normal">
+                FULL_STACK_DEV
+              </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-black text-zinc-900 dark:text-white leading-none uppercase tracking-tighter mb-8 transition-colors">
               <span className="block text-zinc-900 dark:text-zinc-100 hover:text-amber-600 dark:hover:text-white transition-colors duration-300">
-                Code<span className="text-amber-500 dark:text-amber-400">.</span>
+                Code
+                <span className="text-amber-500 dark:text-amber-400">.</span>
               </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 dark:from-yellow-300 dark:via-amber-400 dark:to-amber-600 drop-shadow-[0_2px_25px_rgba(251,191,36,0.25)] dark:drop-shadow-[0_0_35px_rgba(251,191,36,0.35)] py-1">
                 Create<span className="text-zinc-900 dark:text-white">.</span>
               </span>
               <span className="block text-zinc-900 dark:text-zinc-100 hover:text-amber-600 dark:hover:text-white transition-colors duration-300">
-                Deploy<span className="text-amber-500 dark:text-amber-400">.</span>
+                Deploy
+                <span className="text-amber-500 dark:text-amber-400">.</span>
               </span>
             </h1>
 
@@ -53,7 +86,13 @@ export default function Hero({ theme }) {
             <div className="relative pl-0 lg:pl-6 py-2 mb-8 text-center lg:text-left">
               <div className="hidden lg:block absolute left-0 top-0 w-1.5 h-full bg-gradient-to-b from-amber-400 via-yellow-500 to-amber-600 rounded-full shadow-[0_0_12px_rgba(251,191,36,0.6)]" />
               <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light transition-colors">
-                Hi, I'm <span className="text-zinc-900 dark:text-white font-bold tracking-tight">Ranjeet Vishwakarma</span>. I architect and engineer high-performance web applications, translating intricate requirements into resilient, pixel-perfect digital experiences.
+                Hi, I'm{" "}
+                <span className="text-zinc-900 dark:text-white font-bold tracking-tight">
+                  Ranjeet Vishwakarma
+                </span>
+                . I architect and engineer high-performance web applications,
+                translating intricate requirements into resilient, pixel-perfect
+                digital experiences.
               </p>
             </div>
 
@@ -80,7 +119,7 @@ export default function Hero({ theme }) {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
               <a
-                href={`${import.meta.env.BASE_URL}PDF/My Resume.pdf`}
+                href={`${import.meta.env.BASE_URL}PDF/Ranjit_ELTN_resume.pdf`}
                 download="Ranjeet_Vishwakarma_Resume.pdf"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-black font-extrabold uppercase text-sm tracking-widest rounded-full shadow-[0_4px_25px_rgba(251,191,36,0.35)] hover:shadow-[0_0_40px_rgba(251,191,36,0.6)] hover:-translate-y-1 transition-all duration-300"
               >
@@ -99,8 +138,10 @@ export default function Hero({ theme }) {
 
             {/* Social & Verification Badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-8 transition-colors">
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Connect:</span>
-              
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">
+                Connect:
+              </span>
+
               <a
                 href="https://github.com/Ranjit2002/Web_Projects.git"
                 target="_blank"
@@ -129,13 +170,11 @@ export default function Hero({ theme }) {
                 <span className="text-xs font-mono">Email</span>
               </a>
             </div>
-
           </div>
 
           {/* Right Hero Visual: Orbital Avatar System */}
           <div className="lg:col-span-5 flex justify-center items-center mt-6 lg:mt-0">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 group">
-              
               {/* Outer Radiant Glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/25 via-yellow-400/20 to-transparent dark:from-amber-500/25 rounded-full blur-3xl group-hover:blur-2xl group-hover:bg-amber-400/35 transition-all duration-700 pointer-events-none" />
 
@@ -156,7 +195,7 @@ export default function Hero({ theme }) {
                     e.currentTarget.src = `${import.meta.env.BASE_URL}img/Ranjit.jpg`;
                   }}
                 />
-                
+
                 {/* Subtle Gradient Vignette on Image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 dark:opacity-60 group-hover:opacity-30 transition-opacity" />
               </div>
@@ -167,20 +206,24 @@ export default function Hero({ theme }) {
                   <Terminal className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">Core Focus</div>
-                  <div className="text-xs font-bold text-zinc-900 dark:text-white">Full Stack Architecture</div>
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">
+                    Core Focus
+                  </div>
+                  <div className="text-xs font-bold text-zinc-900 dark:text-white">
+                    Full Stack Architecture
+                  </div>
                 </div>
               </div>
 
               {/* Floating Pill Badge 2: Ready to Ship */}
               <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-white/90 dark:bg-zinc-950/90 border border-zinc-200/90 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 px-4 py-2 rounded-2xl shadow-xl backdrop-blur-xl flex items-center gap-2.5 z-20 hover:border-amber-400/60 transition-all duration-300 animate-float-reverse">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-                <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">Ready to Ship</span>
+                <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">
+                  Ready to Ship
+                </span>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
