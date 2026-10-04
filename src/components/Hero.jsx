@@ -7,7 +7,6 @@ import {
   Terminal,
   CheckCircle2,
   Zap,
-  ShieldCheck,
   Code2,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons.jsx";
@@ -17,22 +16,26 @@ export default function Hero({ theme }) {
     {
       value: "98%",
       label: "Lighthouse Score",
-      icon: <Zap className="w-3.5 h-3.5 text-amber-500" />,
+      icon: <Zap className="w-4 h-4 text-amber-500 dark:text-amber-400 group-hover:scale-125 transition-transform duration-300" />,
+      color: "from-amber-500/20 via-yellow-500/10 to-transparent",
     },
     {
       value: "3+ Yrs",
       label: "Active Coding",
-      icon: <Terminal className="w-3.5 h-3.5 text-amber-500" />,
+      icon: <Terminal className="w-4 h-4 text-amber-500 dark:text-amber-400 group-hover:scale-125 transition-transform duration-300" />,
+      color: "from-yellow-500/20 via-amber-500/10 to-transparent",
     },
     {
       value: "15+",
       label: "Projects & Repos",
-      icon: <Code2 className="w-3.5 h-3.5 text-amber-500" />,
+      icon: <Code2 className="w-4 h-4 text-amber-500 dark:text-amber-400 group-hover:scale-125 transition-transform duration-300" />,
+      color: "from-amber-600/20 via-yellow-500/10 to-transparent",
     },
     {
       value: "100%",
       label: "Responsive Design",
-      icon: <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />,
+      icon: <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 group-hover:scale-125 transition-transform duration-300" />,
+      color: "from-emerald-500/20 via-amber-500/10 to-transparent",
     },
   ];
 
@@ -42,8 +45,8 @@ export default function Hero({ theme }) {
       className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden"
     >
       {/* Dynamic Ambient Background Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] md:w-[950px] h-[500px] bg-gradient-to-br from-amber-400/15 via-yellow-300/10 to-transparent dark:from-amber-500/15 dark:via-yellow-400/10 blur-[150px] rounded-full pointer-events-none z-0" />
-      <div className="absolute top-1/2 right-[-10%] w-[450px] h-[450px] bg-amber-500/10 dark:bg-amber-600/10 blur-[170px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] md:w-[1000px] h-[550px] bg-gradient-to-br from-amber-400/20 via-yellow-300/15 to-transparent dark:from-amber-500/20 dark:via-yellow-400/10 blur-[150px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/2 right-[-10%] w-[450px] h-[450px] bg-gradient-to-tr from-amber-500/15 via-orange-500/10 to-transparent blur-[170px] rounded-full pointer-events-none z-0" />
 
       {/* Grid Pattern with Vignette */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_45%,#000_65%,transparent_100%)] opacity-40 dark:opacity-25 pointer-events-none z-0 transition-opacity duration-300" />
@@ -53,41 +56,41 @@ export default function Hero({ theme }) {
           {/* Left Hero Details */}
           <div className="lg:col-span-7 text-center lg:text-left pt-6 lg:pt-0">
             {/* Status Pill */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-amber-500/10 dark:bg-amber-400/15 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs md:text-sm rounded-full shadow-[0_2px_15px_rgba(245,158,11,0.12)] dark:shadow-[0_0_20px_rgba(251,191,36,0.12)] mb-8 transition-colors">
+            <div className="reveal-on-scroll inline-flex items-center gap-2.5 px-4 py-2 bg-gradient-to-r from-amber-500/15 via-yellow-400/10 to-amber-500/15 border border-amber-500/40 dark:border-amber-400/40 text-amber-800 dark:text-amber-300 font-mono text-xs md:text-sm rounded-full shadow-[0_4px_20px_rgba(245,158,11,0.18)] dark:shadow-[0_0_25px_rgba(251,191,36,0.18)] mb-8 transition-all duration-300 hover:border-amber-400 hover:scale-105 cursor-default">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
               </span>
               <span className="tracking-wider uppercase font-semibold">
                 Available for Opportunities
               </span>
               <span className="text-zinc-400 dark:text-zinc-600">|</span>
-              <span className="text-zinc-600 dark:text-zinc-400 font-normal">
+              <span className="text-zinc-700 dark:text-zinc-300 font-semibold">
                 FULL_STACK_DEV
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-black text-zinc-900 dark:text-white leading-none uppercase tracking-tighter mb-8 transition-colors">
-              <span className="block text-zinc-900 dark:text-zinc-100 hover:text-amber-600 dark:hover:text-white transition-colors duration-300">
+            <h1 className="reveal-on-scroll delay-100 text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-black text-zinc-900 dark:text-white leading-none uppercase tracking-tighter mb-8 transition-colors">
+              <span className="inline-block text-zinc-900 dark:text-zinc-100 hover:text-amber-500 dark:hover:text-amber-400 hover:translate-x-2 transition-all duration-300">
                 Code
                 <span className="text-amber-500 dark:text-amber-400">.</span>
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 dark:from-yellow-300 dark:via-amber-400 dark:to-amber-600 drop-shadow-[0_2px_25px_rgba(251,191,36,0.25)] dark:drop-shadow-[0_0_35px_rgba(251,191,36,0.35)] py-1">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 drop-shadow-[0_4px_30px_rgba(251,191,36,0.35)] dark:drop-shadow-[0_0_40px_rgba(251,191,36,0.45)] py-1 hover:brightness-110 transition-all duration-300">
                 Create<span className="text-zinc-900 dark:text-white">.</span>
               </span>
-              <span className="block text-zinc-900 dark:text-zinc-100 hover:text-amber-600 dark:hover:text-white transition-colors duration-300">
+              <span className="inline-block text-zinc-900 dark:text-zinc-100 hover:text-amber-500 dark:hover:text-amber-400 hover:translate-x-2 transition-all duration-300">
                 Deploy
                 <span className="text-amber-500 dark:text-amber-400">.</span>
               </span>
             </h1>
 
             {/* Sub-headline description */}
-            <div className="relative pl-0 lg:pl-6 py-2 mb-8 text-center lg:text-left">
-              <div className="hidden lg:block absolute left-0 top-0 w-1.5 h-full bg-gradient-to-b from-amber-400 via-yellow-500 to-amber-600 rounded-full shadow-[0_0_12px_rgba(251,191,36,0.6)]" />
+            <div className="reveal-on-scroll delay-150 relative pl-0 lg:pl-6 py-2 mb-8 text-center lg:text-left">
+              <div className="hidden lg:block absolute left-0 top-0 w-1.5 h-full bg-gradient-to-b from-amber-400 via-yellow-500 to-orange-500 rounded-full shadow-[0_0_15px_rgba(251,191,36,0.7)]" />
               <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light transition-colors">
                 Hi, I'm{" "}
-                <span className="text-zinc-900 dark:text-white font-bold tracking-tight">
+                <span className="text-zinc-900 dark:text-white font-extrabold tracking-tight underline decoration-amber-400/60 decoration-2 underline-offset-4">
                   Ranjeet Vishwakarma
                 </span>
                 . I architect and engineer high-performance web applications,
@@ -97,19 +100,20 @@ export default function Hero({ theme }) {
             </div>
 
             {/* Metrics Ribbon */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto lg:mx-0 mb-10">
+            <div className="reveal-on-scroll delay-200 grid grid-cols-2 sm:grid-cols-4 gap-3.5 max-w-xl mx-auto lg:mx-0 mb-10">
               {metrics.map((item, idx) => (
                 <div
                   key={idx}
-                  className="px-3.5 py-2.5 rounded-2xl bg-white/70 dark:bg-zinc-950/60 border border-zinc-200/80 dark:border-zinc-800/80 backdrop-blur-md shadow-sm dark:shadow-none hover:border-amber-400/50 transition-all duration-300 text-left"
+                  className="group relative p-3 rounded-2xl bg-white/80 dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-zinc-800/80 backdrop-blur-xl shadow-sm hover:border-amber-400/80 hover:shadow-[0_10px_25px_-5px_rgba(245,158,11,0.25)] hover:-translate-y-1.5 transition-all duration-300 text-left overflow-hidden cursor-default"
                 >
-                  <div className="flex items-center gap-1.5 mb-1">
+                  <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl ${item.color} rounded-bl-full pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-300`} />
+                  <div className="flex items-center gap-1.5 mb-1 relative z-10">
                     {item.icon}
-                    <span className="text-sm sm:text-base font-black text-zinc-900 dark:text-white font-mono">
+                    <span className="text-sm sm:text-base font-black text-zinc-900 dark:text-white font-mono tracking-tight group-hover:text-amber-500 dark:group-hover:text-amber-400 transition-colors duration-300">
                       {item.value}
                     </span>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-zinc-500 font-mono tracking-tight uppercase">
+                  <div className="text-[10px] sm:text-xs text-zinc-500 dark:text-zinc-400 font-mono tracking-tight uppercase relative z-10">
                     {item.label}
                   </div>
                 </div>
@@ -117,28 +121,28 @@ export default function Hero({ theme }) {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
+            <div className="reveal-on-scroll delay-250 flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
               <a
                 href={`${import.meta.env.BASE_URL}PDF/Ranjit_ELTN_resume.pdf`}
                 download="Ranjeet_Vishwakarma_Resume.pdf"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-black font-extrabold uppercase text-sm tracking-widest rounded-full shadow-[0_4px_25px_rgba(251,191,36,0.35)] hover:shadow-[0_0_40px_rgba(251,191,36,0.6)] hover:-translate-y-1 transition-all duration-300"
+                className="btn-shimmer group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-400 hover:via-yellow-300 hover:to-amber-400 text-zinc-950 font-extrabold uppercase text-sm tracking-widest rounded-full shadow-[0_4px_25px_rgba(251,191,36,0.4)] hover:shadow-[0_0_40px_rgba(251,191,36,0.7)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 border border-amber-300/60"
               >
                 <span>Download CV</span>
-                <Download className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
+                <Download className="w-4 h-4 transition-transform group-hover:translate-y-1" />
               </a>
 
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-white/80 dark:bg-zinc-950/80 text-amber-600 dark:text-amber-400 font-bold uppercase text-sm tracking-widest rounded-full border border-amber-400/60 hover:bg-amber-400 hover:text-black hover:border-amber-400 dark:hover:bg-amber-400 dark:hover:text-black transition-all duration-300 hover:-translate-y-1 shadow-[0_2px_15px_rgba(0,0,0,0.06)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(251,191,36,0.3)] backdrop-blur-md"
+                className="btn-shimmer group inline-flex items-center gap-3 px-8 py-4 bg-white/90 dark:bg-zinc-950/90 text-zinc-900 dark:text-zinc-100 font-bold uppercase text-sm tracking-widest rounded-full border border-zinc-300/80 dark:border-zinc-800 hover:border-amber-400 hover:bg-gradient-to-r hover:from-amber-400/20 hover:to-yellow-400/20 hover:text-amber-600 dark:hover:text-amber-300 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-[0_0_30px_rgba(251,191,36,0.3)] backdrop-blur-xl"
               >
                 <span>Contact Me</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1.5 text-amber-500" />
               </a>
             </div>
 
             {/* Social & Verification Badges */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-8 transition-colors">
-              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">
+            <div className="reveal-on-scroll delay-300 flex flex-wrap items-center justify-center lg:justify-start gap-4 border-t border-zinc-200 dark:border-zinc-900 pt-8 transition-colors">
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest font-semibold">
                 Connect:
               </span>
 
@@ -146,63 +150,65 @@ export default function Hero({ theme }) {
                 href="https://github.com/Ranjit2002/Web_Projects.git"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-400 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/50 hover:bg-amber-50/50 dark:hover:bg-zinc-900 shadow-sm dark:shadow-none transition-all duration-300"
+                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/60 hover:bg-amber-50/60 dark:hover:bg-zinc-900 shadow-sm hover:shadow-[0_0_20px_rgba(251,191,36,0.25)] hover:-translate-y-0.5 transition-all duration-300"
               >
-                <GithubIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs font-mono">GitHub</span>
+                <GithubIcon className="w-4 h-4 group-hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs font-mono font-medium">GitHub</span>
               </a>
 
               <a
                 href="https://linkedin.com/in/ranjeet-vishwakarma-5008262a5"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-400 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/50 hover:bg-amber-50/50 dark:hover:bg-zinc-900 shadow-sm dark:shadow-none transition-all duration-300"
+                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/60 hover:bg-amber-50/60 dark:hover:bg-zinc-900 shadow-sm hover:shadow-[0_0_20px_rgba(251,191,36,0.25)] hover:-translate-y-0.5 transition-all duration-300"
               >
-                <LinkedinIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs font-mono">LinkedIn</span>
+                <LinkedinIcon className="w-4 h-4 group-hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs font-mono font-medium">LinkedIn</span>
               </a>
 
               <a
                 href="mailto:vishwakarmaranjit8109@gmail.com"
-                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-400 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/50 hover:bg-amber-50/50 dark:hover:bg-zinc-900 shadow-sm dark:shadow-none transition-all duration-300"
+                className="group flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 rounded-full text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/60 hover:bg-amber-50/60 dark:hover:bg-zinc-900 shadow-sm hover:shadow-[0_0_20px_rgba(251,191,36,0.25)] hover:-translate-y-0.5 transition-all duration-300"
               >
-                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs font-mono">Email</span>
+                <Mail className="w-4 h-4 group-hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs font-mono font-medium">Email</span>
               </a>
             </div>
           </div>
 
           {/* Right Hero Visual: Orbital Avatar System */}
-          <div className="lg:col-span-5 flex justify-center items-center mt-6 lg:mt-0">
+          <div className="reveal-scale lg:col-span-5 flex justify-center items-center mt-6 lg:mt-0">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 group">
               {/* Outer Radiant Glow */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-amber-400/25 via-yellow-400/20 to-transparent dark:from-amber-500/25 rounded-full blur-3xl group-hover:blur-2xl group-hover:bg-amber-400/35 transition-all duration-700 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/30 via-yellow-400/25 to-orange-500/20 dark:from-amber-500/35 rounded-full blur-3xl group-hover:blur-2xl group-hover:bg-amber-400/45 transition-all duration-700 pointer-events-none" />
 
               {/* Orbital Ring 1: Dashed Clockwise */}
-              <div className="absolute inset-[-18px] sm:inset-[-26px] border-2 border-dashed border-amber-500/40 dark:border-amber-400/40 rounded-full animate-[spin_24s_linear_infinite] group-hover:border-amber-500 dark:group-hover:border-amber-400/80 transition-colors duration-500 pointer-events-none" />
+              <div className="absolute inset-[-18px] sm:inset-[-26px] border-2 border-dashed border-amber-500/40 dark:border-amber-400/50 rounded-full animate-[spin_24s_linear_infinite] group-hover:border-amber-500 dark:group-hover:border-amber-400 transition-colors duration-500 pointer-events-none" />
 
               {/* Orbital Ring 2: Thin Counter-Clockwise */}
-              <div className="absolute inset-[-9px] sm:inset-[-14px] border border-zinc-300 dark:border-zinc-700/80 rounded-full animate-[spin_18s_linear_infinite_reverse] group-hover:border-amber-400/60 transition-colors duration-500 pointer-events-none" />
+              <div className="absolute inset-[-9px] sm:inset-[-14px] border border-zinc-300/80 dark:border-amber-500/30 rounded-full animate-[spin_18s_linear_infinite_reverse] group-hover:border-amber-400/70 transition-colors duration-500 pointer-events-none" />
 
-              {/* Profile Image Container */}
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-zinc-900 shadow-[0_15px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_0_50px_rgba(0,0,0,0.9)] z-10 bg-zinc-100 dark:bg-zinc-950 transition-colors">
-                <img
-                  src={`${import.meta.env.BASE_URL}img/Ranjit.jpg`}
-                  alt="Ranjeet Vishwakarma"
-                  className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src = `${import.meta.env.BASE_URL}img/Ranjit.jpg`;
-                  }}
-                />
+              {/* Profile Image Container with Linear Gradient Border Ring */}
+              <div className="relative w-full h-full rounded-full p-1.5 bg-gradient-to-tr from-amber-500 via-yellow-300 to-amber-600 shadow-[0_15px_45px_rgba(251,191,36,0.3)] dark:shadow-[0_0_55px_rgba(251,191,36,0.4)] group-hover:shadow-[0_0_65px_rgba(251,191,36,0.6)] transition-all duration-500">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-zinc-950">
+                  <img
+                    src={`${import.meta.env.BASE_URL}img/Ranjit.jpg`}
+                    alt="Ranjeet Vishwakarma"
+                    className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-108"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = `${import.meta.env.BASE_URL}img/Ranjit.jpg`;
+                    }}
+                  />
 
-                {/* Subtle Gradient Vignette on Image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 dark:opacity-60 group-hover:opacity-30 transition-opacity" />
+                  {/* Subtle Gradient Vignette on Image */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-500" />
+                </div>
               </div>
 
               {/* Floating Pill Badge 1: Clean Code */}
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-2 sm:-left-6 bg-white/90 dark:bg-zinc-950/90 border border-zinc-200/90 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 px-4 py-2.5 rounded-2xl shadow-xl backdrop-blur-xl flex items-center gap-3 z-20 hover:border-amber-400/60 transition-all duration-300 animate-float">
-                <div className="p-1.5 bg-amber-500/10 dark:bg-amber-400/10 text-amber-600 dark:text-amber-400 rounded-lg">
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-2 sm:-left-6 bg-white/95 dark:bg-zinc-950/95 border border-amber-400/40 text-zinc-800 dark:text-zinc-200 px-4 py-2.5 rounded-2xl shadow-xl backdrop-blur-2xl flex items-center gap-3 z-20 hover:border-amber-400 hover:scale-105 transition-all duration-300 animate-float cursor-default">
+                <div className="p-2 bg-gradient-to-br from-amber-500/20 to-yellow-500/10 text-amber-600 dark:text-amber-400 rounded-xl border border-amber-500/30">
                   <Terminal className="w-4 h-4" />
                 </div>
                 <div>
@@ -216,8 +222,8 @@ export default function Hero({ theme }) {
               </div>
 
               {/* Floating Pill Badge 2: Ready to Ship */}
-              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-white/90 dark:bg-zinc-950/90 border border-zinc-200/90 dark:border-zinc-800 text-zinc-800 dark:text-zinc-300 px-4 py-2 rounded-2xl shadow-xl backdrop-blur-xl flex items-center gap-2.5 z-20 hover:border-amber-400/60 transition-all duration-300 animate-float-reverse">
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-white/95 dark:bg-zinc-950/95 border border-amber-400/40 text-zinc-800 dark:text-zinc-200 px-4 py-2 rounded-2xl shadow-xl backdrop-blur-2xl flex items-center gap-2.5 z-20 hover:border-amber-400 hover:scale-105 transition-all duration-300 animate-float-reverse cursor-default">
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.9)]" />
                 <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">
                   Ready to Ship
                 </span>

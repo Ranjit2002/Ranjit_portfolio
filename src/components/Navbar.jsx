@@ -15,7 +15,7 @@ export default function Navbar({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -37,7 +37,7 @@ export default function Navbar({
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/85 dark:bg-[#08080a]/85 backdrop-blur-xl border-b border-zinc-200/80 dark:border-zinc-800/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3"
+          ? "bg-white/85 dark:bg-[#08080a]/85 backdrop-blur-2xl border-b border-amber-500/20 shadow-[0_10px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3"
           : "bg-transparent py-5 border-b border-transparent"
       }`}
     >
@@ -46,19 +46,19 @@ export default function Navbar({
         <a
           href="#home"
           onClick={() => handleNavClick("home")}
-          className="group text-2xl md:text-3xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white flex items-center gap-1 transition-colors"
+          className="group text-2xl md:text-3xl font-black uppercase tracking-tighter text-zinc-900 dark:text-white flex items-center gap-1 transition-all duration-300 hover:scale-105"
         >
           <span className="relative">
             Ranjeet
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500 group-hover:w-full transition-all duration-300"></span>
           </span>
-          <span className="text-amber-500 dark:text-amber-400 inline-block group-hover:animate-bounce">
+          <span className="text-amber-500 dark:text-amber-400 inline-block group-hover:rotate-12 transition-transform duration-300">
             .
           </span>
         </a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-1 bg-white/80 dark:bg-zinc-950/60 border border-zinc-200/90 dark:border-zinc-800/60 rounded-full px-4 py-1.5 backdrop-blur-md shadow-sm dark:shadow-none transition-colors">
+        <div className="hidden lg:flex items-center gap-1 bg-white/85 dark:bg-zinc-950/75 border border-zinc-200/90 dark:border-zinc-800/80 rounded-full px-4 py-1.5 backdrop-blur-xl shadow-sm transition-all duration-300 hover:border-amber-400/40">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -68,7 +68,7 @@ export default function Navbar({
                 onClick={() => handleNavClick(link.id)}
                 className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
                   isActive
-                    ? "text-black font-bold bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 shadow-[0_0_15px_rgba(251,191,36,0.45)]"
+                    ? "text-zinc-950 font-extrabold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 shadow-[0_0_20px_rgba(251,191,36,0.5)] scale-105"
                     : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100/90 dark:hover:bg-zinc-900/60"
                 }`}
               >
@@ -87,7 +87,7 @@ export default function Navbar({
           <a
             href={`${import.meta.env.BASE_URL}PDF/Ranjit_ELTN_resume.pdf`}
             download="Ranjeet_Vishwakarma_Resume.pdf"
-            className="group relative inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/30 dark:border-amber-400/40 rounded-full hover:bg-amber-400 hover:text-black dark:hover:bg-amber-400 dark:hover:text-black transition-all duration-300 shadow-[0_2px_10px_rgba(245,158,11,0.12)] hover:shadow-[0_0_20px_rgba(251,191,36,0.35)]"
+            className="btn-shimmer group relative inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-zinc-900 dark:text-amber-300 bg-gradient-to-r from-amber-500/15 via-yellow-400/15 to-amber-500/15 hover:from-amber-400 hover:via-yellow-300 hover:to-amber-400 hover:text-zinc-950 dark:hover:text-zinc-950 border border-amber-500/40 dark:border-amber-400/40 rounded-full transition-all duration-300 shadow-[0_2px_12px_rgba(245,158,11,0.15)] hover:shadow-[0_0_25px_rgba(251,191,36,0.45)] hover:-translate-y-0.5 cursor-pointer"
           >
             <FileDown className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
             <span>Resume</span>
@@ -116,11 +116,11 @@ export default function Navbar({
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
           mobileMenuOpen
-            ? "max-h-[450px] opacity-100 border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-[#08080a]/95 backdrop-blur-2xl shadow-xl"
+            ? "max-h-[460px] opacity-100 border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-[#08080a]/95 backdrop-blur-2xl shadow-xl"
             : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 py-6 space-y-3">
+        <div className="px-6 py-6 space-y-2.5">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -128,9 +128,9 @@ export default function Navbar({
                 key={link.id}
                 href={link.href}
                 onClick={() => handleNavClick(link.id)}
-                className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-r from-amber-400 to-yellow-500 text-black shadow-lg shadow-amber-400/20"
+                    ? "bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold shadow-lg shadow-amber-400/25"
                     : "text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:bg-zinc-100 dark:hover:bg-zinc-900/60"
                 }`}
               >
@@ -142,7 +142,7 @@ export default function Navbar({
             <a
               href={`${import.meta.env.BASE_URL}PDF/Ranjit_ELTN_resume.pdf`}
               download="Ranjeet_Vishwakarma_Resume.pdf"
-              className="w-full flex items-center justify-center gap-2 py-3 bg-amber-400 text-black font-bold uppercase tracking-wider rounded-xl text-sm shadow-md hover:bg-amber-300 transition-colors"
+              className="btn-shimmer w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold uppercase tracking-wider rounded-xl text-sm shadow-md hover:shadow-lg transition-all duration-300"
             >
               <FileDown className="w-4 h-4" />
               Download Resume

@@ -71,24 +71,24 @@ export default function Contact({ onShowToast, theme }) {
 
   return (
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden border-t border-zinc-200/80 dark:border-zinc-900/60 transition-colors">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-amber-400/10 dark:bg-amber-500/10 blur-[180px] rounded-full pointer-events-none" />
+      {/* Background ambient lighting with linear gradient */}
+      <div className="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-amber-400/15 via-yellow-400/10 to-orange-500/10 blur-[180px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-16 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs rounded-full uppercase tracking-widest mb-4 transition-colors">
-            <MessageSquare className="w-3.5 h-3.5" />
+        <div className="reveal-on-scroll mb-16 text-center md:text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-amber-500/15 to-yellow-400/10 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs rounded-full uppercase tracking-widest mb-4 transition-all duration-300 hover:scale-105 cursor-default">
+            <MessageSquare className="w-3.5 h-3.5 text-amber-500" />
             <span>Initiate Communication</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter transition-colors">
             Let's{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 dark:from-yellow-300 dark:via-amber-400 dark:to-amber-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 drop-shadow-[0_2px_20px_rgba(251,191,36,0.3)]">
               Build Together
             </span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full mt-4 mx-auto md:mx-0 shadow-[0_0_12px_rgba(251,191,36,0.6)]" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 rounded-full mt-4 mx-auto md:mx-0 shadow-[0_0_15px_rgba(251,191,36,0.6)]" />
           <p className="text-zinc-600 dark:text-zinc-400 mt-6 max-w-xl text-base md:text-lg font-light leading-relaxed transition-colors">
             Have an open role, an exciting startup idea, or need architectural expertise on your project? Let's connect and turn it into reality.
           </p>
@@ -97,20 +97,20 @@ export default function Contact({ onShowToast, theme }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14">
           
           {/* Left Column: Direct Contact Details & Badges */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="reveal-fade-left lg:col-span-5 space-y-6">
             
             {/* Email Card */}
-            <div className="group p-8 rounded-[2.5rem] bg-white/80 dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/50 backdrop-blur-xl transition-all duration-500 shadow-xl dark:shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="group p-8 rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/75 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/80 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_-10px_rgba(251,191,36,0.22)] relative overflow-hidden cursor-default">
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-500 via-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 text-black flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(251,191,36,0.3)] group-hover:scale-105 transition-transform duration-300">
-                  <Mail className="w-7 h-7" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 via-yellow-400 to-orange-500 text-zinc-950 flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(251,191,36,0.4)] group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="w-7 h-7 stroke-[2]" />
                 </div>
 
                 <button
                   onClick={() => handleCopy('vishwakarmaranjit8109@gmail.com', 'email')}
-                  className="px-3.5 py-1.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/50 rounded-xl text-xs font-mono flex items-center gap-1.5 transition-colors shadow-sm dark:shadow-none"
+                  className="px-3.5 py-1.5 bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/60 rounded-xl text-xs font-mono flex items-center gap-1.5 transition-all duration-300 shadow-sm hover:scale-105 cursor-pointer"
                   title="Copy email address"
                 >
                   {copiedType === 'email' ? (
@@ -139,17 +139,17 @@ export default function Contact({ onShowToast, theme }) {
             </div>
 
             {/* Phone Card */}
-            <div className="group p-8 rounded-[2.5rem] bg-white/80 dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/50 backdrop-blur-xl transition-all duration-500 shadow-xl dark:shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-400 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="group p-8 rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/75 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/80 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[0_20px_45px_-10px_rgba(251,191,36,0.22)] relative overflow-hidden cursor-default">
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-500 via-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 text-black flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(251,191,36,0.3)] group-hover:scale-105 transition-transform duration-300">
-                  <Phone className="w-7 h-7" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 via-yellow-400 to-orange-500 text-zinc-950 flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(251,191,36,0.4)] group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="w-7 h-7 stroke-[2]" />
                 </div>
 
                 <button
                   onClick={() => handleCopy('+919519228002', 'phone')}
-                  className="px-3.5 py-1.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/50 rounded-xl text-xs font-mono flex items-center gap-1.5 transition-colors shadow-sm dark:shadow-none"
+                  className="px-3.5 py-1.5 bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-amber-500 dark:hover:text-amber-400 hover:border-amber-400/60 rounded-xl text-xs font-mono flex items-center gap-1.5 transition-all duration-300 shadow-sm hover:scale-105 cursor-pointer"
                   title="Copy phone number"
                 >
                   {copiedType === 'phone' ? (
@@ -178,12 +178,12 @@ export default function Contact({ onShowToast, theme }) {
             </div>
 
             {/* Quick Status / Availability Card */}
-            <div className="p-6 rounded-[2rem] bg-white/60 dark:bg-zinc-950/40 border border-zinc-200 dark:border-zinc-800/60 backdrop-blur-md flex items-center gap-4 shadow-sm dark:shadow-none transition-colors">
-              <div className="p-3 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-2xl">
+            <div className="p-6 rounded-[2rem] bg-white/70 dark:bg-zinc-950/50 border border-zinc-200/90 dark:border-zinc-800/80 backdrop-blur-md flex items-center gap-4 shadow-sm hover:border-amber-400/50 transition-all duration-300">
+              <div className="p-3 bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-emerald-500/30">
                 <Clock className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-xs font-mono uppercase tracking-wider text-zinc-500">Current Status</div>
+                <div className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">Current Status</div>
                 <div className="text-sm font-bold text-zinc-900 dark:text-white">Open to Full-Time &amp; High-Impact Contract Work</div>
               </div>
             </div>
@@ -191,10 +191,10 @@ export default function Contact({ onShowToast, theme }) {
           </div>
 
           {/* Right Column: Interactive Form */}
-          <div className="lg:col-span-7">
-            <div className="p-8 sm:p-12 rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-zinc-800/80 backdrop-blur-2xl shadow-xl dark:shadow-2xl relative overflow-hidden">
+          <div className="reveal-fade-right lg:col-span-7">
+            <div className="p-8 sm:p-12 rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/75 border border-zinc-200/90 dark:border-zinc-800/80 backdrop-blur-2xl shadow-xl dark:shadow-2xl relative overflow-hidden group hover:border-amber-400/60 transition-all duration-300">
               
-              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 dark:bg-amber-400/5 rounded-bl-full pointer-events-none" />
+              <div className="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl from-amber-400/15 via-yellow-400/10 to-transparent rounded-bl-full pointer-events-none" />
 
               <h3 className="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight mb-2 transition-colors">
                 Send a Transmission
@@ -204,7 +204,7 @@ export default function Contact({ onShowToast, theme }) {
               </p>
 
               {formStatus.state === 'success' ? (
-                <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-4">
+                <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-4 animate-scale">
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 mx-auto flex items-center justify-center">
                     <Check className="w-8 h-8" />
                   </div>
@@ -214,7 +214,7 @@ export default function Contact({ onShowToast, theme }) {
                   </p>
                   <button
                     onClick={() => setFormStatus({ state: 'idle', message: '' })}
-                    className="px-6 py-2.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-white rounded-full text-xs font-mono uppercase tracking-wider hover:border-amber-400"
+                    className="btn-shimmer px-6 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 text-zinc-950 font-bold rounded-full text-xs font-mono uppercase tracking-wider hover:shadow-md cursor-pointer"
                   >
                     Send Another Message
                   </button>
@@ -223,7 +223,7 @@ export default function Contact({ onShowToast, theme }) {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                      <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-semibold">
                         Your Name <span className="text-amber-500 dark:text-amber-400">*</span>
                       </label>
                       <input
@@ -233,12 +233,12 @@ export default function Contact({ onShowToast, theme }) {
                         onChange={handleChange}
                         required
                         placeholder="John Doe"
-                        className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-amber-400/30 transition-all font-light"
+                        className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-amber-400/30 transition-all font-light"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                      <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-semibold">
                         Your Email <span className="text-amber-500 dark:text-amber-400">*</span>
                       </label>
                       <input
@@ -248,13 +248,13 @@ export default function Contact({ onShowToast, theme }) {
                         onChange={handleChange}
                         required
                         placeholder="john@example.com"
-                        className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-amber-400/30 transition-all font-light"
+                        className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-amber-400/30 transition-all font-light"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-semibold">
                       Subject / Topic
                     </label>
                     <input
@@ -263,12 +263,12 @@ export default function Contact({ onShowToast, theme }) {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="Project Collaboration / Full-Time Role"
-                      className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-amber-400/30 transition-all font-light"
+                      className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-amber-400/30 transition-all font-light"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">
+                    <label className="text-xs font-mono text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-semibold">
                       Your Message <span className="text-amber-500 dark:text-amber-400">*</span>
                     </label>
                     <textarea
@@ -278,7 +278,7 @@ export default function Contact({ onShowToast, theme }) {
                       onChange={handleChange}
                       required
                       placeholder="Tell me about your project, goals, or schedule a conversation..."
-                      className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-1 focus:ring-amber-400/30 transition-all font-light resize-none"
+                      className="w-full px-5 py-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-amber-400/30 transition-all font-light resize-none"
                     ></textarea>
                   </div>
 
@@ -291,10 +291,10 @@ export default function Contact({ onShowToast, theme }) {
                   <button
                     type="submit"
                     disabled={formStatus.state === 'loading'}
-                    className="w-full py-5 px-8 rounded-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-black font-extrabold uppercase text-sm tracking-widest hover:shadow-[0_4px_35px_rgba(251,191,36,0.45)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50"
+                    className="btn-shimmer w-full py-5 px-8 rounded-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-400 hover:via-yellow-300 hover:to-amber-400 text-zinc-950 font-extrabold uppercase text-sm tracking-widest hover:shadow-[0_4px_35px_rgba(251,191,36,0.55)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-50 cursor-pointer border border-amber-300/60"
                   >
                     <span>{formStatus.state === 'loading' ? 'Transmitting...' : 'Send Message'}</span>
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </button>
                 </form>
               )}

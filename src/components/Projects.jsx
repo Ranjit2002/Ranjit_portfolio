@@ -16,9 +16,9 @@ export default function Projects({ theme }) {
       github: 'https://github.com/Ranjit2002/Web_Projects.git',
       demoUrl: 'https://github.com/Ranjit2002/Web_Projects.git',
       stats: '60 FPS / Lighthouse 98',
-      previewGradient: 'from-amber-500/20 via-yellow-500/10 to-amber-600/20',
+      previewGradient: 'from-amber-500/25 via-yellow-400/15 to-orange-500/20',
       slug: 'fullstack-platform.app',
-      icon: <Server className="w-5 h-5 text-amber-500" />,
+      icon: <Server className="w-5 h-5 text-amber-500 group-hover:scale-115 transition-transform duration-300" />,
     },
     {
       id: 'ui-system',
@@ -30,9 +30,9 @@ export default function Projects({ theme }) {
       github: 'https://github.com/Ranjit2002/Web_Projects.git',
       demoUrl: 'https://github.com/Ranjit2002/Web_Projects.git',
       stats: '100% Responsive',
-      previewGradient: 'from-blue-500/20 via-indigo-500/10 to-amber-500/20',
+      previewGradient: 'from-yellow-400/25 via-amber-500/15 to-amber-600/20',
       slug: 'ui-design-system.dev',
-      icon: <Laptop className="w-5 h-5 text-amber-500" />,
+      icon: <Laptop className="w-5 h-5 text-amber-500 group-hover:scale-115 transition-transform duration-300" />,
     },
     {
       id: 'algorithms',
@@ -44,9 +44,9 @@ export default function Projects({ theme }) {
       github: 'https://github.com/Ranjit2002/Web_Projects.git',
       demoUrl: 'https://github.com/Ranjit2002/Web_Projects.git',
       stats: 'Optimized O(N log N)',
-      previewGradient: 'from-emerald-500/20 via-teal-500/10 to-amber-500/20',
+      previewGradient: 'from-emerald-500/20 via-amber-500/15 to-orange-500/20',
       slug: 'algo-engine.py',
-      icon: <Code className="w-5 h-5 text-amber-500" />,
+      icon: <Code className="w-5 h-5 text-amber-500 group-hover:scale-115 transition-transform duration-300" />,
     },
     {
       id: 'devops',
@@ -58,9 +58,9 @@ export default function Projects({ theme }) {
       github: 'https://github.com/Ranjit2002/Web_Projects.git',
       demoUrl: 'https://github.com/Ranjit2002/Web_Projects.git',
       stats: 'Automated CI/CD',
-      previewGradient: 'from-purple-500/20 via-amber-500/10 to-pink-500/20',
+      previewGradient: 'from-orange-500/25 via-amber-400/15 to-yellow-500/20',
       slug: 'ci-pipeline-config.yml',
-      icon: <FolderGit2 className="w-5 h-5 text-amber-500" />,
+      icon: <FolderGit2 className="w-5 h-5 text-amber-500 group-hover:scale-115 transition-transform duration-300" />,
     },
   ];
 
@@ -77,48 +77,48 @@ export default function Projects({ theme }) {
 
   return (
     <section id="projects" className="relative py-24 md:py-32 overflow-hidden border-t border-zinc-200/80 dark:border-zinc-900/60 transition-colors">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-amber-400/10 dark:bg-amber-500/10 blur-[180px] rounded-full pointer-events-none" />
+      {/* Background ambient lighting with linear gradient */}
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-amber-400/15 via-yellow-400/10 to-orange-500/10 blur-[180px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs rounded-full uppercase tracking-widest mb-4 transition-colors">
-              <FolderGit2 className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-amber-500/15 to-yellow-400/10 border border-amber-500/30 dark:border-amber-400/30 text-amber-700 dark:text-amber-300 font-mono text-xs rounded-full uppercase tracking-widest mb-4 transition-all duration-300 hover:scale-105 cursor-default">
+              <FolderGit2 className="w-3.5 h-3.5 text-amber-500" />
               <span>Featured Creations</span>
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-zinc-900 dark:text-white uppercase tracking-tighter transition-colors">
               Highlighted{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 dark:from-yellow-300 dark:via-amber-400 dark:to-amber-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 drop-shadow-[0_2px_20px_rgba(251,191,36,0.3)]">
                 Projects
               </span>
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full mt-4 shadow-[0_0_12px_rgba(251,191,36,0.6)]" />
+            <div className="w-24 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-500 rounded-full mt-4 shadow-[0_0_15px_rgba(251,191,36,0.6)]" />
           </div>
 
           <a
             href="https://github.com/Ranjit2002/Web_Projects.git"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 text-sm font-mono text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300 transition-colors uppercase tracking-widest"
+            className="group inline-flex items-center gap-2 text-sm font-mono text-amber-600 dark:text-amber-400 hover:text-amber-500 dark:hover:text-amber-300 transition-colors uppercase tracking-widest hover:underline decoration-amber-400 decoration-2 underline-offset-4"
           >
             <span>View All on GitHub</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </a>
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex flex-wrap gap-2 mb-12">
+        <div className="reveal-on-scroll delay-100 flex flex-wrap gap-2.5 mb-12">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
+              className={`btn-shimmer px-4 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-amber-400 text-black font-bold shadow-[0_2px_15px_rgba(251,191,36,0.4)]'
-                  : 'bg-white/80 dark:bg-zinc-900/80 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800'
+                  ? 'bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-zinc-950 font-bold shadow-[0_4px_20px_rgba(251,191,36,0.4)] scale-105'
+                  : 'bg-white/80 dark:bg-zinc-900/80 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 hover:border-amber-400/50'
               }`}
             >
               {cat.label}
@@ -127,30 +127,30 @@ export default function Projects({ theme }) {
         </div>
 
         {/* Project Cards Grid with Browser Window Headers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="reveal-on-scroll delay-150 grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.title}
-              className="group relative rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/70 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/50 backdrop-blur-xl shadow-xl dark:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden"
+              className="group relative rounded-[2.5rem] bg-white/85 dark:bg-zinc-950/75 border border-zinc-200/90 dark:border-zinc-800/80 hover:border-amber-400/80 backdrop-blur-xl shadow-xl hover:shadow-[0_20px_45px_-10px_rgba(251,191,36,0.25)] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between overflow-hidden cursor-default"
             >
-              {/* Top gradient accent strip */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
+              {/* Top linear gradient accent strip */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
 
               {/* Styled Browser Window Chrome / Mockup Header */}
-              <div className="bg-zinc-100/90 dark:bg-zinc-900/80 border-b border-zinc-200 dark:border-zinc-800/80 px-6 py-3.5 flex items-center justify-between transition-colors">
+              <div className={`bg-gradient-to-r ${project.previewGradient} border-b border-zinc-200/80 dark:border-zinc-800/80 px-6 py-4 flex items-center justify-between transition-colors`}>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400/80" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-400/80" />
+                  <div className="w-3 h-3 rounded-full bg-red-400/90 shadow-[0_0_6px_rgba(248,113,113,0.6)]" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400/90 shadow-[0_0_6px_rgba(250,204,21,0.6)]" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-400/90 shadow-[0_0_6px_rgba(52,211,153,0.6)]" />
                 </div>
                 
                 {/* Simulated URL Bar */}
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-zinc-950/80 border border-zinc-200/60 dark:border-zinc-800/60 text-[11px] font-mono text-zinc-500 max-w-[200px] truncate">
+                <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/90 dark:bg-zinc-950/90 border border-zinc-200/80 dark:border-zinc-800/80 text-[11px] font-mono text-zinc-600 dark:text-zinc-400 max-w-[210px] truncate shadow-sm">
                   <span className="text-amber-500 font-bold">https://</span>
                   <span className="truncate">{project.slug}</span>
                 </div>
 
-                <div className="text-zinc-400">
+                <div className="text-zinc-500 dark:text-zinc-400">
                   {project.icon}
                 </div>
               </div>
@@ -159,19 +159,19 @@ export default function Projects({ theme }) {
               <div className="p-8 md:p-10 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold px-3 py-1 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/20 dark:border-amber-400/20 rounded-full transition-colors">
+                    <span className="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold px-3 py-1 bg-gradient-to-r from-amber-500/10 to-yellow-400/10 border border-amber-500/30 dark:border-amber-400/30 rounded-full transition-colors">
                       {project.categoryLabel}
                     </span>
-                    <span className="text-xs font-mono text-zinc-500">
+                    <span className="text-xs font-mono text-zinc-500 font-medium">
                       {project.stats}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors duration-300">
                     {project.title}
                   </h3>
 
-                  <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-6 transition-colors">
+                  <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-6 transition-colors duration-300">
                     {project.desc}
                   </p>
 
@@ -180,7 +180,7 @@ export default function Projects({ theme }) {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs rounded-full font-mono transition-colors"
+                        className="px-3 py-1 bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-amber-400/50 hover:text-amber-600 dark:hover:text-amber-300 text-xs rounded-full font-mono transition-all duration-300"
                       >
                         {tag}
                       </span>
@@ -196,16 +196,16 @@ export default function Projects({ theme }) {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-600 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors group/link"
                   >
-                    <GithubIcon className="w-4 h-4" />
+                    <GithubIcon className="w-4 h-4 group-hover/link:scale-120 transition-transform duration-300" />
                     <span>Repository</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-link:translate-x-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-0.5" />
                   </a>
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-2 bg-amber-500/10 dark:bg-amber-400/10 hover:bg-amber-400 hover:text-black dark:hover:bg-amber-400 dark:hover:text-black text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-widest rounded-full border border-amber-500/30 dark:border-amber-400/30 transition-all duration-300 shadow-sm"
+                    className="btn-shimmer px-5 py-2.5 bg-gradient-to-r from-amber-500/15 via-yellow-400/15 to-amber-500/15 hover:from-amber-400 hover:via-yellow-300 hover:to-amber-400 hover:text-black dark:hover:from-amber-400 dark:hover:via-yellow-300 dark:hover:to-amber-400 dark:hover:text-black text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-widest rounded-full border border-amber-500/40 dark:border-amber-400/40 transition-all duration-300 shadow-sm hover:shadow-[0_0_20px_rgba(251,191,36,0.35)] hover:-translate-y-0.5"
                   >
                     Explore Code
                   </a>
